@@ -10,11 +10,15 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var slider : UISlider!
+    let literalImage: UIImage = #imageLiteral(resourceName: "slider_thumb")
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        slider.setThumbImage(literalImage, for: .normal)
     }
     
+    //동작
     @IBAction func sliderValueChanged(_ sender : UISlider){
         print(sender.value)
     }
