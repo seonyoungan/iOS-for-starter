@@ -14,9 +14,9 @@
     
     
     
-
-## 🍎swift-grammar
-### <1. 변수와 상수>
+#
+### 🍎 swift-grammar
+### <1> 변수와 상수
 #### 1. varable and constant
 1. 변수: 값수정 가능
 2. 상수: 값 수정 불가 (변경코드 작성시 컴파일 에러)
@@ -76,7 +76,7 @@ var languages = [String]()
 var capitals = [String: String]()
 ```
 
-### <2. 조건문과 반복문>
+### <2> 조건문과 반복문
 1. if문
 ```swift
 var age = 10
@@ -159,7 +159,7 @@ while i < 100{
 } //while이 true일 때까지 계속 반복됨
 ```
 
-### <3. Optional>
+### <3> Optional
 1. 직역: 선택적
 2. 의미: 값이 있을수도, 없을수도 있는 것
     - 없는 문자열: `nil`
@@ -229,4 +229,6 @@ print(optionalEmail) //Optional("a@gmail.com")
 print(optionalEmail!) // a@gmail.com
 ```
 
+#
+프로젝트 출처: https://www.youtube.com/c/yagom   
 문법공부 출처: https://devxoul.gitbooks.io/ios-with-swift-in-40-hours/content/
