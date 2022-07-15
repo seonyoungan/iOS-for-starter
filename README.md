@@ -38,4 +38,11 @@
 2. 반폐쇄 범위 연산자(미만 표시): `A..<B`
 3. 단방향 범위 연산자: `A...` `...A` `...<A`
 #
+
+### 🍎 결과물
+<img width="724" alt="2022-07-16 오전 12 57 39" src="https://user-images.githubusercontent.com/74126735/179262041-c54a63c0-fc73-446a-8fe3-7cc7b04a1980.png">
+<img width="724" alt="2022-07-16 오전 12 58 12" src="https://user-images.githubusercontent.com/74126735/179262048-7bfade1c-a2f0-42ad-ad8a-05821b6259e4.png">
+<img width="724" alt="2022-07-16 오전 12 58 22" src="https://user-images.githubusercontent.com/74126735/179262055-0b453f43-ebca-495d-8d7a-4c3fd84a546a.png">
+
+#
 프로젝트 출처: https://www.youtube.com/c/yagom
