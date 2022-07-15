@@ -54,7 +54,7 @@ class ViewController: UIViewController {
         "\(tryCount) / 5"
         
         if randomValue == hitValue{ // 맞추면 HIT, 게임종료
-            print("YOU HIT!")
+            showAlert(message: "YOU HIT!")
             reset() //게임 초기화
         } else if tryCount >= 5{ //5회이상 선택시 게임종료
             print("YOU Lose..")
