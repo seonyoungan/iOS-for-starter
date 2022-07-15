@@ -30,10 +30,42 @@ class ViewController: UIViewController {
     @IBAction func sliderValueChanged(_ sender : UISlider){
         print(sender.value)
         viewDidLoad() //literalImage가 보여짐
+        let integerVlaue: Int = Int(sender.value)
+
+        sliderValueLabel.text = String(sender.value)
     }
     
+    func showAlert(message: String){
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .default){
+            (action) in self.reset()
+        }//버튼 하나하나
+        
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+    }
     @IBAction func touchUpHitButton(_ sender: UIButton){
         print(slider.value)
+        let hitValue: Int = Int(slider.value)
+        slider.value = Float(hitValue) //사용자가 잡아끄는 값을 정밀하게 표현
+        tryCount = tryCount + 1
+        tryCountLabel.text =
+        "\(tryCount) / 5"
+        
+        if randomValue == hitValue{ // 맞추면 HIT, 게임종료
+            print("YOU HIT!")
+            reset() //게임 초기화
+        } else if tryCount >= 5{ //5회이상 선택시 게임종료
+            print("YOU Lose..")
+            reset()
+        } else if randomValue > hitValue { //사용자가 선택한 숫자에 따라 minimum, maximum 범위 바꿔주기
+            slider.minimumValue = Float(hitValue)
+            minimumValueLabel.text = String(hitValue)
+        } else if randomValue < hitValue{ //사용자가 선택한 숫자에 따라 minimum, maximum 범위 바꿔주기
+            slider.maximumValue = Float(hitValue)
+            maximumValueLabel.text = String(hitValue)
+        }
     }
     
     @IBAction func touchUpResetButton(_ sender: UIButton){
